@@ -1,18 +1,20 @@
 <!-- Main content -->
 <section class="content-header">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>Selamat Datang
-                </h1>
-
-
-
-
-
-                <h4 class="text-muted" id='time'></h4>
+        <div class="row mx-auto">
+            <div class="col-8 col-sm-2">
+                <h5>Selamat Datang</h5>
+                <p class="text-muted mb-3" id='time'></p>
             </div>
 
+
+
+        </div>
+        <div class="row">
+            <div class="col-8 col-sm-6 mx-auto">
+                <h3 class="text-center mb-2">Halaman Utama</h3>
+                <img src="<?= base_url('img/img/admin.svg'); ?>" class="mx-auto img-fluid d-flex" style="width: 300px;">
+            </div>
         </div>
     </div><!-- /.container-fluid -->
 </section>
@@ -40,7 +42,7 @@
 
 
         ?>
-        <div class="row col-11 mx-auto mt-5">
+        <div class="row col-11 mx-auto mt-3">
             <div class="col-lg-4">
                 <!-- small card -->
                 <div class="small-box bg-success">

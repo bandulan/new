@@ -13,22 +13,21 @@
             <form action="" method="post">
 
                 <label for="id_pemilik">id_pemilik</label>
-                <input class="form-control" type="text" name="id_pemilik" id="id_pemilik" value="12" readonly>
+                <input class="form-control" type="text" name="id_pemilik" id="id_pemilik" value="12" hidden>
 
                 <label for="kegiatan">Kegiatan</label>
-                <input type="text" class="form-control" name="kegiatan" id="kegiatan" value="Pemecahan Sertifikat" readonly>
+                <input type="text" class="form-control" name="kegiatan" id="kegiatan" value="Pemecahan Sertifikat" hidden>
 
                 <label for="verifikasi">Verifikasi</label>
-                <input type="text" class="form-control" name="verifikasi" id="verifikasi" value="Menunggu Verifikasi" readonly>
+                <input type="text" class="form-control" name="verifikasi" id="verifikasi" value="Menunggu Verifikasi" hidden>
 
                 <div class="form-group">
                     <label for="alamat_persil">Alamat</label>
                     <input type="text" class="form-control" id="alamat_persil" name="alamat_persil" placeholder="Alamat Persil">
                 </div>
 
-
                 <!-- div.form-group -->
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="kecamatan">Kecamatan</label>
                     <select id="kecamatan" name="kecamatan" class="form-control">
                         <option selected>Pilih Kecamatan...</option>
@@ -56,7 +55,20 @@
                 <div class="form-group">
                     <label for="batas_selatan">Batas Selatan</label>
                     <input class="form-control" type="text" name="batas_selatan" id="batas_selatan" placeholder="Tetangga / Batas Sebelah Selatan">
-                </div> -->
+                </div>
+                <div class="form-group">
+                    <label for="batas_timur">Batas Timur</label>
+                    <input class="form-control" type="text" name="batas_timur" id="batas_timur" placeholder="Tetangga / Batas Sebelah Timur">
+                </div>
+
+                <div class="form-group">
+                    <label for="batas_barat">Batas Barat</label>
+                    <input class="form-control" type="text" name="batas_barat" id="batas_barat" placeholder="Tetangga / Batas Sebelah Barat">
+                </div>
+
+
+
+
 
                 <button type="submit" class="btn btn-primary float-right" name="tambah">Daftar</button>
             </form>

@@ -67,6 +67,7 @@
      return this.href == url;
    }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
  </script>
+
  </body>
 
  </html>

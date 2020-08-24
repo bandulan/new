@@ -67,6 +67,21 @@
      return this.href == url;
    }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
  </script>
+ <script type="text/javascript">
+   $(document).ready(function() {
+     setInterval(function() {
+       $.ajax({
+         url: "<?= base_url() ?>warga/get_tot",
+         type: "POST",
+         dataType: "json", //datatype lainnya: html, text
+         data: {},
+         success: function(data) {
+           $("#tot-prod").html(data.tot);
+         }
+       });
+     }, 5000);
+   })
+ </script>
  </body>
 
  </html>

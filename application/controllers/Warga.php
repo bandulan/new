@@ -11,6 +11,21 @@ class Warga extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    public function ada()
+    {
+        $tot = $this->Tagihan_model->hitung();
+        $result['tot'] = $tot;
+
+        echo json_encode($result);
+    }
+    public function get_tot()
+    {
+        $tot = $this->Tagihan_model->hitung();
+        $result['tot'] = $tot;
+        $result['msg'] = "Berhasil direfresh secara realtime";
+        echo json_encode($result);
+    }
+
     public function index()
     {
         $this->load->view('warga/templates/header');
@@ -41,24 +56,32 @@ class Warga extends CI_Controller
         }
     }
 
+    //LIHAT TAGIHAN
 
-
-    public function proses()
+    public function tabeltagihan()
     {
-        $data["persil"] = $this->Persil_model->getpersilbyidWarga(); //get  function $mahasiswa yang dipanggil di index.php
+        $this->load->model("Tagihan_model"); //masuk ke model persil
+        $data["tagihan"] = $this->Tagihan_model->tagihanwarga(); //get  function $persil yang dipanggil di index.php
+
         $this->load->view('warga/templates/header');
-        $this->load->view('warga/proses', $data);
+        $this->load->view('warga/tabeltagihan', $data);
         $this->load->view('warga/templates/footer');
     }
 
-
-    //LIHAT TAGIHAN
-    public function tagihan()
+    public function inputbayar($id_persil)
     {
-        $data["tagihan"] = $this->Tagihan_model->getTagihan(); //get  function $mahasiswa yang dipanggil di index.php
-        $this->load->view('warga/templates/header');
-        $this->load->view('warga/tagihan', $data);
-        $this->load->view('warga/templates/footer');
+        $data["tagihan"] = $this->Tagihan_model->getId($id_persil);
+        $this->form_validation->set_rules('harga', 'Harga', 'required');  //set validasi di form tambah
+        if ($this->form_validation->run() == FALSE) {              //kalau data yang di input tidak benar, masuk ke form tambah
+
+            $this->load->view('warga/templates/header.php');
+            $this->load->view("warga/formtagihan", $data);                      //form tambah
+            $this->load->view("warga/templates/footer");
+        } else {                                                    // kalau validasi benar
+            $this->Tagihan_model->bayar($id_persil);
+            // $this->session->set_flashdata('flash', 'ditambahkan');    //set notif berhasil
+            redirect('warga/tabeltagihan');                                   //redirect ke controller mahasiswa
+        }
     }
 
 
@@ -79,16 +102,21 @@ class Warga extends CI_Controller
     }
 
 
-    //TAGIHAN
-    public function tabeltagihan()
+    //lihat proses
+    public function proses()
     {
-        $this->load->model("Tagihan_model"); //masuk ke model persil
-        $data["tagihan"] = $this->Tagihan_model->tagihanwarga(); //get  function $persil yang dipanggil di index.php
-
+        $data["persil"] = $this->Persil_model->getpersilbyidWarga(); //get  function $mahasiswa yang dipanggil di index.php
         $this->load->view('warga/templates/header');
-        $this->load->view('warga/tabeltagihan', $data);
+        $this->load->view('warga/proses', $data);
         $this->load->view('warga/templates/footer');
     }
+
+
+
+    //TAGIHAN
+
+
+
 
     /* public function tes()
     {

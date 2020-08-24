@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Data Persil
+                <h1>Data Tagihan
                 </h1>
             </div>
 

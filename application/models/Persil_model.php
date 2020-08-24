@@ -85,4 +85,26 @@ class Persil_model extends CI_model
 
         ])->result_array(); //select dari tabel 
     }
+
+
+    // proses
+    public function addProses($id_persil)
+    {
+        $data = [
+            "id_persil" => $id_persil,
+            "status" => "Berhasil Diverifikasi"
+        ];
+
+        $this->db->insert('proses', $data); //insert to tabel persil
+    }
+
+    public function verifikasiBayar($id_persil)
+    {
+        $data = [
+            "id_persil" => $id_persil,
+            "status" => "Menunggu Pembayaran"
+        ];
+
+        $this->db->insert('proses', $data); //insert to tabel persil
+    }
 }

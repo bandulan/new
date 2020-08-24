@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Fixed Sidebar</title>
+  <title>Jarvis | Aplikasi Pertanahan BPN Kab. Pringsewu</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -49,10 +49,10 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Logout</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Contact</a>
         </li>
         <li class="nav-item">

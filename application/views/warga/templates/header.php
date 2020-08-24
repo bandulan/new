@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+<?php
+$hitung = $this->Tagihan_model->hitung(); ?>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Fixed Sidebar</title>
+  <title>Jarvis | Aplikasi Pertanahan BPN Kab. Pringsewu</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -36,7 +38,10 @@
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
+        <li class="nav-item">
+          <img src="<?= base_url() ?>img/logo.png" class="nav-link">
+        </li>
+        <li class=" nav-item d-none d-sm-inline-block">
           <a class="nav-link">Aplikasi Pendaftaran Tanah BPN Kab. Pringsewu</a>
         </li>
 
@@ -49,10 +54,10 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Logout</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">Contact</a>
         </li>
         <li class="nav-item">
@@ -61,12 +66,45 @@
         <li class="nav-item">
           <a href="<?= base_url('admin'); ?>" class="nav-link">Admin</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <?php
+            if ($hitung >= 1) {
+            ?>
+              <span class="badge badge-warning navbar-badge"><?= $hitung; ?></span>
+            <?php } else { ?>
+              <span class="badge badge-warning navbar-badge"></span>
+            <?php
+            } ?>
+          </a>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+
+            <span class="badge badge-warning navbar-badge" id="tot-prod"></span>
+
+          </a>
+
+
+          <!-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-wallet mr-2"></i><?= $hitung; ?> Tagihan baru
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+          </div> -->
+        </li>
         <!-- Messages Dropdown Menu -->
 
         <!-- Notifications Dropdown Menu -->
 
         <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <a class="nav-link d-none d-sm-inline-block" data-widget="control-sidebar" data-slide="true" href="#" role="button">
             <i class="fas fa-th-large"></i>
           </a>
         </li>
@@ -143,6 +181,7 @@
                 </li> -->
           </ul>
           </li>
+
 
           </ul>
         </nav>

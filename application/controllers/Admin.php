@@ -69,15 +69,24 @@ class Admin extends CI_Controller
 
         $this->Persil_model->verifikasi($id_persil);
         echo "<script>alert('Verifikasi berhasil'); window.location=('../tabelverifikasibaru');</script>";
-        //redirect('admin/pembayaran/' . $id_persil);
+
+        redirect('proses/verifikasiDaftar/' . $id_persil);
     }
 
 
     //PROSES
-    function proses($id_persil)
+    /* function proses($id_persil)
     {
-        echo "$id_persil";
-    }
+        $this->load->model("Persil_model"); //masuk ke model persil
+        //$data['persil'] = $this->Persil_model->addProses($id_persil);
+
+
+        // kalau validasi benar
+        $this->Persil_model->addProses($id_persil);
+        // $this->session->set_flashdata('flash', 'ditambahkan');    //set notif berhasil
+
+        redirect('admin/tabeltagihan');
+    } */
 
 
     //PEMECAHAN
@@ -127,12 +136,13 @@ class Admin extends CI_Controller
             $this->load->view("petugas/footer");
         } else {                                                    // kalau validasi benar
             $this->Tagihan_model->inputtagihan();
-            // $this->session->set_flashdata('flash', 'ditambahkan');    //set notif berhasil
-            redirect('admin/tabeltagihan');                                   //redirect ke controller mahasiswa
+            redirect('proses/inputBayar/' . $id_persil);
+
+            //redirect('admin/tabeltagihan');                                   //redirect ke controller mahasiswa
         }
     }
 
-    public function prosestagihan($id_persil)
+    /*  public function prosestagihan($id_persil)
     {
 
         $this->load->model("Tagihan_model"); //masuk ke model persil
@@ -141,5 +151,10 @@ class Admin extends CI_Controller
         //$this->load->model("Tagihan_model"); //masuk ke model persil
         //$data["warga"] = $this->Warga_model->allwarga(); //get  function $persil yang dipanggil di index.php
 
-    }
+        $insert_id = $this->db->insert_id();
+
+			//set notif berhasil
+			//redirect('warga');                                   //redirect ke controller mahasiswa
+			echo "<script>alert('data lokasi berhasil dimasukkan, silahkan masukkan informasi kamar. id lokasi= . $insert_id;'); window.location=('p_detail.php?id_lokasi=" . $insert_id . "') </script>";
+    } */
 }

@@ -11,23 +11,13 @@
     </div><!-- /.container-fluid -->
 </section>
 <section class="content">
-
-
-
-
     <div class="container-fluid">
-
-
-
         <div class="row">
-
-            <div class="col-lg-12 table-responsive mx-auto">
-
-
-                <table id="dataa" class="col-sm-12table table-bordered table-hover">
+            <div class="col-12 table-responsive-sm table-body mx-auto">
+                <table id="dataa" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th style="text-align: center;">Kegiatan</th>
+                            <th style="text-align: center;"> Kegiatan</th>
                             <th style="text-align: center;">Harga</th>
                             <th style="text-align: center;">Status</th>
                             <th style="text-align: center;">Persil</th>
@@ -43,7 +33,7 @@
                                 <td><?= $p['status']; ?></td>
                                 <td><?= $p['id_persil']; ?></td>
                                 <td style="text-align: center;">
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-money-bill"></i> </i> &nbsp; Invoice</a>
+                                    <a href="<?= base_url('warga/inputbayar/'); ?><?= $p['id_persil'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-money-bill"></i> </i> &nbsp; Bayar</a>
                                 </td>
 
                             </tr>
@@ -52,19 +42,10 @@
 
                 </table>
             </div>
-
-
-
-
             <!-- /.card -->
         </div>
-
-
     </div>
-
-
     <!-- /.card -->
-
 </section>
 
 <!-- /.content -->
