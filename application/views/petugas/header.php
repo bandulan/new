@@ -179,6 +179,12 @@
                 <p>Tabel Tagihan</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="<?= base_url('admin/formPage'); ?>" class="nav-link">
+                <i class="fas fa-credit-card nav-icon"></i>
+                <p>Form Page</p>
+              </a>
+            </li>
 
           </ul>
         </nav>
