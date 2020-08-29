@@ -32,7 +32,7 @@ $r      = mysqli_query($conn, "SELECT * FROM warga WHERE id_warga='1'");    //pi
 
 
     <div class="container-fluid">
-        <br>
+
         <div class="row">
             <div class="col-lg-3 mx-auto">
                 <div class="card card-primary card-outline">

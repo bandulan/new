@@ -25,7 +25,7 @@
 
                 <div class="form-group">
                     <label for="status">Status Pembayaran</label>
-                    <input type="text" class="form-control" id="status" name="status" value="Belum Dibayar" readonly>
+                    <input type="text" class="form-control" id="status" name="status" value="Lunas" readonly>
                 </div>
 
                 <label for="harga">Jumlah Tagihan</label>

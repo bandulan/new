@@ -136,9 +136,9 @@ class Admin extends CI_Controller
             $this->load->view("petugas/footer");
         } else {                                                    // kalau validasi benar
             $this->Tagihan_model->inputtagihan();
-            redirect('proses/inputBayar/' . $id_persil);
+            /*  redirect('proses/inputBayar/' . $id_persil); */
 
-            //redirect('admin/tabeltagihan');                                   //redirect ke controller mahasiswa
+            redirect('admin/tabeltagihan');                                   //redirect ke controller mahasiswa
         }
     }
 

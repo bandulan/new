@@ -78,7 +78,7 @@ $hitung = $this->Tagihan_model->hitung(); ?>
             <?php
             } ?>
           </a>
-        <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-bell"></i>
 
@@ -98,7 +98,7 @@ $hitung = $this->Tagihan_model->hitung(); ?>
             <div class="dropdown-divider"></div>
 
           </div> -->
-        </li>
+        </li> -->
         <!-- Messages Dropdown Menu -->
 
         <!-- Notifications Dropdown Menu -->
@@ -137,9 +137,9 @@ $hitung = $this->Tagihan_model->hitung(); ?>
         </div>
 
         <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
+        <nav class="mt-2 ">
+          <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item text-sm">
               <a href="<?= base_url('warga'); ?>" class="nav-link">
                 <i class="nav-icon fas fa-home"></i>
                 <p> Menu Utama
@@ -147,7 +147,7 @@ $hitung = $this->Tagihan_model->hitung(); ?>
                 </p>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item text-sm">
               <a href="<?= base_url('warga/profile'); ?>" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p> Profile
@@ -155,20 +155,59 @@ $hitung = $this->Tagihan_model->hitung(); ?>
                 </p>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item text-sm has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-folder-open"></i>
+                <p>
+                  Menu Layanan
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+
+                <li class="nav-item text-sm">
+                  <a href="<?= base_url('warga/pendaftaran'); ?>" class="nav-link">
+                    <i class="nav-icon fas fa-file-medical"></i>
+                    <p> Pendaftaran Sertifikat Baru
+
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item text-sm">
+                  <a href="<?= base_url('warga/pemecahan'); ?>" class="nav-link">
+                    <i class="nav-icon fas fa-file-download"></i>
+                    <p> Pemecahan Sertifikat
+
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item text-sm">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-file-import"></i>
+                    <p> Penggabungan Sertifikat
+
+                    </p>
+                  </a>
+                </li>
+
+
+              </ul>
+            </li>
+
+            <li class="nav-item text-sm">
               <a href="<?= base_url('warga/proses'); ?>" class="nav-link">
-                <i class="nav-icon fas fa-toolbox"></i>
-                <p> Proses Berjalan
+                <i class="nav-icon fas fa-spinner"></i>
+                <p> Seluruh Progress
 
                 </p>
               </a>
             </li>
 
 
-            <li class="nav-item">
+            <li class="nav-item text-sm">
               <a href="<?= base_url('warga/tabeltagihan'); ?>" class="nav-link">
                 <i class="nav-icon fas fa-wallet"></i>
-                <p> Tagihan
+                <p> Seluruh Tagihan
 
                 </p>
               </a>

@@ -7,18 +7,18 @@
     <br>
     <div class="row">
 
-        <div class="col-lg-6 mx-auto">
+        <div class="col-lg-6 col-11 mx-auto">
 
-            <a href="<?= base_url('warga'); ?>" class="btn btn-danger"><i class="fa fa-backward"></i> Kembali</a>
+            <a href="<?= base_url('warga'); ?>" class="btn btn-danger mb-2"><i class="fa fa-backward"></i> Kembali</a>
             <form action="" method="post">
 
-                <label for="id_pemilik">id_pemilik</label>
+
                 <input class="form-control" type="text" name="id_pemilik" id="id_pemilik" value="12" hidden>
 
-                <label for="kegiatan">Kegiatan</label>
+
                 <input type="text" class="form-control" name="kegiatan" id="kegiatan" value="Pendaftaran Baru" hidden>
 
-                <label for="verifikasi">Verifikasi</label>
+
                 <input type="text" class="form-control" name="verifikasi" id="verifikasi" value="Menunggu Verifikasi" hidden>
 
                 <div class="form-group">

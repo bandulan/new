@@ -113,7 +113,7 @@
                 <i class="nav-icon fas fa-users"></i>
                 <p>
                   Warga
-                  <i class="right fas fa-angle-left"></i>
+                  <i class="right fas fa-chevron-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -126,19 +126,22 @@
 
               </ul>
             </li>
+
+
+
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-map"></i>
                 <p>
                   Pendaftaran Baru
-                  <i class="right fas fa-angle-left"></i>
+                  <i class="right fas fa-chevron-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="<?= base_url('admin/allpersil'); ?>" class="nav-link">
-                    <i class="fas fa-reply-all nav-icon"></i>
-                    <p>Semua Persil</p>
+                    <i class="fas fa-angle-double-right nav-icon"></i>
+                    <p>Semua Data</p>
                   </a>
                 </li>
 
@@ -150,14 +153,14 @@
                 <i class="nav-icon fas fa-external-link-alt"></i>
                 <p>
                   Pemecahan Sertifikat
-                  <i class="right fas fa-angle-left"></i>
+                  <i class="right fas fa-chevron-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="<?= base_url('admin/tabelpemecahan'); ?>" class="nav-link">
-                    <i class="fas fa-reply-all nav-ic"></i>
-                    <p>Semua Persil</p>
+                    <i class="fas fa-angle-double-right nav-ic"></i>
+                    <p>Semua Data</p>
                   </a>
                 </li>
 
@@ -167,6 +170,7 @@
               <a href="<?= base_url('admin/tabelverifikasibaru'); ?>" class="nav-link">
                 <i class="fas fa-minus-circle nav-icon"></i>
                 <p>Belum Verifikasi</p>
+                <span class="badge badge-warning">10</span>
               </a>
             </li>
             <li class="nav-item">

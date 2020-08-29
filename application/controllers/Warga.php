@@ -26,6 +26,8 @@ class Warga extends CI_Controller
         echo json_encode($result);
     }
 
+    //MENU-menu
+
     public function index()
     {
         $this->load->view('warga/templates/header');
@@ -39,6 +41,22 @@ class Warga extends CI_Controller
         $this->load->view('warga/profile');
         $this->load->view('warga/templates/footer');
     }
+
+    public function pendaftaran()
+    {
+        $this->load->view('warga/templates/header');
+        $this->load->view('warga/pendaftaran');
+        $this->load->view('warga/templates/footer');
+    }
+
+    public function pemecahan()
+    {
+        $this->load->view('warga/templates/header');
+        $this->load->view('warga/pemecahan');
+        $this->load->view('warga/templates/footer');
+    }
+
+
 
     //PENDAFTARAN SERTIFIKAT BARU
     public function daftarSertifikat()
@@ -75,7 +93,7 @@ class Warga extends CI_Controller
         if ($this->form_validation->run() == FALSE) {              //kalau data yang di input tidak benar, masuk ke form tambah
 
             $this->load->view('warga/templates/header.php');
-            $this->load->view("warga/formtagihan", $data);                      //form tambah
+            $this->load->view("warga/formbayar", $data);                      //form tambah
             $this->load->view("warga/templates/footer");
         } else {                                                    // kalau validasi benar
             $this->Tagihan_model->bayar($id_persil);
