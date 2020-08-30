@@ -211,7 +211,7 @@ CREATE TABLE `warga` (
   `tanggal_lhr` date NOT NULL,
   `foto` varchar(128) NOT NULL,
   `nik` bigint(200) NOT NULL,
-  `tanggal_daftar` date NOT NULL DEFAULT current_timestamp(),
+  `tanggal_daftar` date NOT NULL,
   `username` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL,
   `role` int(11) NOT NULL

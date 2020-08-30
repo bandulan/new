@@ -8,6 +8,8 @@ class Admin extends CI_Controller
         parent::__construct();
         // $this->load->model('Persil_m');
         $this->load->library('form_validation');
+        $this->load->library('create_pdf');
+        require('pdf/surat_pernyataan_tidak_bermasalah.php');
         /* $this->load->library('form_validation'); */
     }
 
@@ -18,6 +20,19 @@ class Admin extends CI_Controller
         $this->load->view('petugas/header');
         $this->load->view('petugas/dashboard');
         $this->load->view('petugas/footer');
+    }
+
+    public function formPage()
+    {   
+        // suratPernyataanTidakBermasalah();
+ 
+        $this->load->view('petugas/header');
+        $this->load->view('petugas/print_form');
+        $this->load->view('petugas/footer');
+    }
+    public function printForm()
+    {   
+        suratPernyataanTidakBermasalah();
     }
 
 
