@@ -212,6 +212,14 @@ $hitung = $this->Tagihan_model->hitung(); ?>
                 </p>
               </a>
             </li>
+            <li class="nav-item text-sm">
+              <a href="<?= base_url('warga/formPage'); ?>" class="nav-link">
+                <i class="nav-icon fas fa-print"></i>
+                <p> Download Dokomen
+
+                </p>
+              </a>
+            </li>
             <!-- <li class="nav-item">
                   <a href="<?= base_url(); ?>petugas/persil" class="nav-link">
                     <i class="far fa-check-square nav-icon"></i>

@@ -23,15 +23,15 @@ class Admin extends CI_Controller
     }
 
     public function formPage()
-    {   
+    {
         // suratPernyataanTidakBermasalah();
- 
+
         $this->load->view('petugas/header');
         $this->load->view('petugas/print_form');
         $this->load->view('petugas/footer');
     }
     public function printForm()
-    {   
+    {
         suratPernyataanTidakBermasalah();
     }
 

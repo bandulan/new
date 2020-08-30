@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-8 col-sm-6 mx-auto">
-                <h3 class="text-center mb-2">Form Page</h3>
+                <h3 class="text-center mb-2">Dokumen </h3>
             </div>
         </div>
     </div><!-- /.container-fluid -->
@@ -17,14 +17,14 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <br>
-                        <p>SURAT PERNYATAAN TIDAK BERMASALAH DAN PEMASANGAN TANDA BATAS</p>
+                        <p style="text-align: center;">SURAT PERNYATAAN TIDAK BERMASALAH DAN PEMASANGAN TANDA BATAS</p>
                         <br>
                     </div>
                     <div class="icon">
-                        <i class="fas fa-map"></i>
+                        <i class="fas fa-print"></i>
                     </div>
                     <a href="<?= base_url('admin/printForm'); ?>" class="small-box-footer">
-                        Print Form  <i class="fas fa-arrow-circle-right"></i>
+                        Print <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>

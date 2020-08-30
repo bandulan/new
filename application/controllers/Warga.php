@@ -56,6 +56,22 @@ class Warga extends CI_Controller
         $this->load->view('warga/templates/footer');
     }
 
+    //DOKUMEN
+    public function formPage()
+    {
+        // suratPernyataanTidakBermasalah();
+        $this->load->model("Tagihan_model"); //masuk ke model persil
+
+        $this->load->view('warga/templates/header');
+        $this->load->view('petugas/print_form');
+        $this->load->view('warga/templates/footer');
+    }
+
+    public function printForm()
+    {
+        suratPernyataanTidakBermasalah();
+    }
+
 
 
     //PENDAFTARAN SERTIFIKAT BARU
